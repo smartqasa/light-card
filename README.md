@@ -1,2 +1,2 @@
-# SmartQasa Light Card
+# SmartQasa Light Card v2
 SmartQasa Light Card
