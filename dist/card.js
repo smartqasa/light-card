@@ -700,6 +700,13 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
         this.dispatchEvent(event);
     }
 }
+customElements.define("smartqasa-light-card2", SmartQasaLightCard2);
+window.customCards = window.customCards || [];
+window.customCards.push({
+    type: "smartqasa-light-card2",
+    name: "SmartQasa Light Card v2.3",
+    description: "A SmartQasa Card for controlling light entities"
+});
 
 },{"lit":"4antt"}],"4antt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

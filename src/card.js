@@ -1,7 +1,7 @@
-import { LitElement, html, css } from 'lit'; 
+import { LitElement, html, css } from 'lit';
 
 class SmartQasaLightCard2 extends LitElement {
-  
+
   static get properties() {
     return {
       hass: { type: Object },
@@ -119,3 +119,15 @@ class SmartQasaLightCard2 extends LitElement {
     this.dispatchEvent(event);
   }
 }
+
+customElements.define(
+  "smartqasa-light-card2",
+  SmartQasaLightCard2
+);
+
+window.customCards = window.customCards || [];
+window.customCards.push({
+  type: "smartqasa-light-card2",
+  name: "SmartQasa Light Card v2.3",
+  description: "A SmartQasa Card for controlling light entities",
+});
