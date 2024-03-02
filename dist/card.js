@@ -607,7 +607,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
         this._config = {};
     }
     setConfig(config) {
-        if (!config.entity) throw new Error("You need to define an entity");
+        if (!config.entity) throw new Error("You need to define an entity.");
         this._config = config;
     }
     render() {

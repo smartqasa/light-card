@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit';
-import { styles } from './styles'
+import { styles } from './styles';
 
 export class SmartQasaLightCard2 extends LitElement {
 
@@ -20,7 +20,7 @@ export class SmartQasaLightCard2 extends LitElement {
 
   setConfig(config) {
     if (!config.entity) {
-      throw new Error('You need to define an entity');
+      throw new Error('You need to define an entity.');
     }
     this._config = config;
   }
