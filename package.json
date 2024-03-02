@@ -1,5 +1,5 @@
 {
-  "source": "src/indexd.js",
+  "source": "src/card.js",
   "module": "dist/card.js",
   "targets": {
     "module": {
