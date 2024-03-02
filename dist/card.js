@@ -589,6 +589,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SmartQasaLightCard2", ()=>SmartQasaLightCard2);
 var _lit = require("lit");
 var _styles = require("./styles");
+var _stylesDefault = parcelHelpers.interopDefault(_styles);
 class SmartQasaLightCard2 extends (0, _lit.LitElement) {
     static get properties() {
         return {
@@ -600,7 +601,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
             }
         };
     }
-    static styles = (0, _styles.styles);
+    static styles = (0, _stylesDefault.default);
     constructor(){
         super();
         this.hass = {};
@@ -1343,9 +1344,8 @@ const o = !1;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}],"7add8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "styles", ()=>styles);
 var _lit = require("lit");
-const styles = (0, _lit.css)`
+exports.default = (0, _lit.css)`
     .container {
         display: grid;
         height: var(--sq-card-height, 4.0rem);

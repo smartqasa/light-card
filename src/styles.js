@@ -1,6 +1,6 @@
-import { css } from 'lit';
+import { css } from "lit";
 
-export const styles = css`
+export default css`
     .container {
         display: grid;
         height: var(--sq-card-height, 4.0rem);
