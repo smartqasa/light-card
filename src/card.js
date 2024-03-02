@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-class SmartQasaLightCard2 extends LitElement {
+export class SmartQasaLightCard2 extends LitElement {
 
   static get properties() {
     return {
@@ -119,7 +119,10 @@ class SmartQasaLightCard2 extends LitElement {
     this.dispatchEvent(event);
   }
 }
-customElements.define('smartqasa-light-card2', SmartQasaLightCard2);
+customElements.define(
+  'smartqasa-light-card2',
+  SmartQasaLightCard2
+);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
