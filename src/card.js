@@ -10,7 +10,9 @@ export class SmartQasaLightCard2 extends LitElement {
     };
   }
 
-  static styles = styles;
+  static get styles() {
+    return styles;
+  }
 
   constructor() {
     super();

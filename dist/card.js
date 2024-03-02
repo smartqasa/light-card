@@ -601,7 +601,9 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
             }
         };
     }
-    static styles = (0, _stylesDefault.default);
+    static get styles() {
+        return 0, _stylesDefault.default;
+    }
     constructor(){
         super();
         this.hass = {};
