@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-class SmartQasaLightCard2 extends LitElement {
+export class SmartQasaLightCard2 extends LitElement {
 
   static get properties() {
     return {
