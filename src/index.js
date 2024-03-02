@@ -1,4 +1,4 @@
-import { SmartQasaLightCard2 } from "./card";
+import { SmartQasaLightCard2 } from './card';
 
 customElements.define('smartqasa-light-card2', SmartQasaLightCard2);
 

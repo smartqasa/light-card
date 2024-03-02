@@ -588,6 +588,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SmartQasaLightCard2", ()=>SmartQasaLightCard2);
 var _lit = require("lit");
+var _styles = require("./styles");
+var _stylesDefault = parcelHelpers.interopDefault(_styles);
 class SmartQasaLightCard2 extends (0, _lit.LitElement) {
     static get properties() {
         return {
@@ -599,58 +601,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
             }
         };
     }
-    static get styles() {
-        return (0, _lit.css)`
-      .container {
-        display: grid;
-        height: var(--sq-card-height, 4.0rem);
-        padding: var(--sq-card-padding, 0 1.0rem);
-        border: var(--sq-card-border, 'none');
-        border-radius: var(--sq-card-border-radius, 1.0rem);
-        box-shadow: var(--sq-card-box-shadow, 0 2px 4px 0 rgba(0, 0, 0, 0.2));
-        grid-template-areas: "i n" "i s";
-        grid-template-columns: auto 1fr;
-        grid-column-gap: var(--sq-card-gap-column, 0.7rem);
-        grid-row-gap: var(--sq-card-gap-row, 0.3rem);
-        background-color: var(--sq-card-background-color, rgba(192, 192, 192, 0.5));
-        cursor: pointer;
-      }
-      .icon {
-        grid-area: i;
-        display: flex;
-        height: var(--sq-icon-size, 25px);
-        width: var(--sq-icon-size, 25px);
-        justify-content: center;
-        align-self: center;
-        padding: var(--sq-icon-padding, 14px);
-        border-radius: 50%;
-        transition: var(--sq-icon-transition, none);
-      }
-      .name {
-        grid-area: n;
-        place-self: end start;
-        max-height: 3.5rem;
-        max-width: 100%;
-        text-align: left;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-        font-weight: var(--sq-primary-font-weight, 400);
-        font-size: var(--sq-primary-font-size, 16px);
-        color: rgb(var(--sq-primary-font-rgb), 128, 128, 128);
-      }
-      .state {
-        grid-area: s;
-        align-self: start;
-        text-align: left;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        font-weight: var(--sq-secondary-font-weight, 300);
-        font-size: var(--sq-secondary-font-size, 14px);
-        color: rgb(var(--sq-secondary-font-rgb, 0, 0, 0));
-      }
-    `;
-    }
+    static styles = (0, _stylesDefault.default);
     constructor(){
         super();
         this.hass = {};
@@ -704,7 +655,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
     }
 }
 
-},{"lit":"4antt"}],"4antt":[function(require,module,exports) {
+},{"lit":"4antt","@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo","./styles":"7add8"}],"4antt":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _reactiveElement = require("@lit/reactive-element");
@@ -1390,6 +1341,61 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "isServer", ()=>o);
 const o = !1;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}]},["jM5Hw","gbMuj"], "gbMuj", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}],"7add8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _lit = require("lit");
+exports.default = (0, _lit.css)`
+    .container {
+        display: grid;
+        height: var(--sq-card-height, 4.0rem);
+        padding: var(--sq-card-padding, 0 1.0rem);
+        border: var(--sq-card-border, 'none');
+        border-radius: var(--sq-card-border-radius, 1.0rem);
+        box-shadow: var(--sq-card-box-shadow, 0 2px 4px 0 rgba(0, 0, 0, 0.2));
+        grid-template-areas: "i n" "i s";
+        grid-template-columns: auto 1fr;
+        grid-column-gap: var(--sq-card-gap-column, 0.7rem);
+        grid-row-gap: var(--sq-card-gap-row, 0.3rem);
+        background-color: var(--sq-card-background-color, rgba(192, 192, 192, 0.5));
+        cursor: pointer;
+    }
+    .icon {
+        grid-area: i;
+        display: flex;
+        height: var(--sq-icon-size, 25px);
+        width: var(--sq-icon-size, 25px);
+        justify-content: center;
+        align-self: center;
+        padding: var(--sq-icon-padding, 14px);
+        border-radius: 50%;
+        transition: var(--sq-icon-transition, none);
+    }
+    .name {
+        grid-area: n;
+        place-self: end start;
+        max-height: 3.5rem;
+        max-width: 100%;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-weight: var(--sq-primary-font-weight, 400);
+        font-size: var(--sq-primary-font-size, 16px);
+        color: rgb(var(--sq-primary-font-rgb), 128, 128, 128);
+    }
+    .state {
+        grid-area: s;
+        align-self: start;
+        text-align: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: var(--sq-secondary-font-weight, 300);
+        font-size: var(--sq-secondary-font-size, 14px);
+        color: rgb(var(--sq-secondary-font-rgb, 0, 0, 0));
+    }
+`;
+
+},{"lit":"4antt","@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}]},["jM5Hw","gbMuj"], "gbMuj", "parcelRequire94c2")
 
 //# sourceMappingURL=card.js.map
