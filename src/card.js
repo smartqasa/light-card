@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit';
-import styles from './styles'
+import { LitElement, html } from 'lit';
+import { styles } from './styles'
 
 export class SmartQasaLightCard2 extends LitElement {
 
