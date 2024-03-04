@@ -5,17 +5,14 @@ export default {
   input: 'src/index.js',
   output: {
     file: 'dist/card.js',
-    format: 'iife', // or 'es' if you're targeting ES modules
-    globals: {
-      lit: 'lit' // This tells Rollup how to handle global variables for external modules
-    },
+    format: 'iife', // Using 'iife' for browsers
+    name: 'SmartQasaLightCard', // Define a global variable name for your bundle
   },
   plugins: [
-    resolve(), // Tells Rollup how to find node modules
+    resolve(), // Ensures Rollup can find `lit` in `node_modules`
     babel({
-      exclude: 'node_modules/**',
+      exclude: 'node_modules/**', // Excludes node_modules from being transpiled by Babel
       babelHelpers: 'bundled',
     }),
-  ],
-  external: ['lit'], // Tells Rollup which imports/dependencies to treat as external
+  ]
 };
