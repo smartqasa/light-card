@@ -1,20 +1,16 @@
 {
-  "source": "src/index.js",
-  "module": "dist/card.js",
-  "targets": {
-    "module": {
-      "includeNodeModules": true
-    }
-  },
+  "name": "smartqasa-light-card",
+  "version": "1.0.0",
+  "description": "A SmartQasa card for controlling a light entity.",
+  "type": "module",
   "scripts": {
-    "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "rollup -c"
   },
   "devDependencies": {
-    "@parcel/transformer-inline-string": "^2.12.0",
-    "parcel": "^2.12.0"
-  },
-  "dependencies": {
-    "lit": "^2.8.0"
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup": "^4.12.0"
   }
 }
