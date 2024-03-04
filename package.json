@@ -10,7 +10,10 @@
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "rollup": "^4.12.0"
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup": "^2.42.0"
+  },
+  "dependencies": {
+    "lit": "^3.1.2"
   }
 }
