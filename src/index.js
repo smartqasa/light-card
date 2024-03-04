@@ -1,4 +1,4 @@
-import { SmartQasaLightTile } from "../cards/light-tile";
+import { SmartQasaLightTile } from "./cards/light-tile";
 
 customElements.define("smartqasa-light-tile", SmartQasaLightTile);
 
