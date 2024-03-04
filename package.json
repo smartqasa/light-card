@@ -1,5 +1,5 @@
 {
-  "source": "src/card.js",
+  "source": "src/card.ts",
   "module": "dist/card.js",
   "targets": {
     "module": {
