@@ -1,9 +1,6 @@
 import { SmartQasaLightCard2 } from './card';
 
-customElements.define(
-  'smartqasa-light-card2',
-  SmartQasaLightCard2
-);
+customElements.define('smartqasa-light-card2',SmartQasaLightCard2);
 
 window.customCards = window.customCards || [];
 window.customCards.push({

@@ -610,18 +610,15 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
         };
     }
     setConfig(config) {
-        this._entity = config.entity;
-        this._icon = config.icon || null;
-        this._name = config.name || null;
+        if (config.entity) {
+            this._entity = config.entity;
+            this._icon = config.icon || null;
+            this._name = config.name || null;
+        } else throw new Error("You need to define an entity");
     }
     set hass(hass) {
         this._hass = hass;
-        this._stateObj = hass.states[this._entity];
-        if (this._stateObj) {
-            this._icon = this._stateObj.attributes.icon || "hass:alert-rhombus";
-            this._name = this._name || this._stateObj.attributes.friendly_name || "Unknown";
-            this._state = this._stateObj.state || "unknown";
-        }
+        this._stateObj = this._hass.states[this._entity] || undefined;
     }
     static get styles() {
         return (0, _lit.css)`
@@ -632,7 +629,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
         border: var(--sq-card-border, 'none');
         border-radius: var(--sq-card-border-radius, 1.0rem);
         box-shadow: var(--sq-card-box-shadow, 0 2px 4px 0 rgba(0, 0, 0, 0.2));
-        grid-template-areas: "i n" "i s";
+        grid-template-areas: 'i n' 'i s';
         grid-template-columns: auto 1fr;
         grid-column-gap: var(--sq-card-gap-column, 0.7rem);
         grid-row-gap: var(--sq-card-gap-row, 0.3rem);
@@ -676,22 +673,29 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
     `;
     }
     render() {
-        if (!this._hass) return (0, _lit.html)``;
-        let iconColor, stateFmtd;
+        let icon, iconColor, name, stateFmtd;
         if (this._stateObj) {
+            this._state = this._stateObj.state;
+            icon = this._icon || this._stateObj.attributes.icon;
+            name = this._name || this._stateObj.attributes.friendly_name;
             iconColor = this._state == "on" ? "var(--sq-light-on-rgb)" : "var(--sq-inactive-rgb)";
             stateFmtd = this._hass.formatEntityState(this._stateObj) + (this._state == "on" && this._stateObj.attributes.brightness ? " - " + this._hass.formatEntityAttributeValue(this._stateObj, "brightness") : "");
         } else {
+            icon = "hass:alert-rhombus";
+            name = this._name || "Unknown";
             iconColor = "var(--sq-unavailable-rgb)";
             stateFmtd = "Unknown";
         }
         return (0, _lit.html)`
-      <div class="container" @click=${this._showMoreInfo}>
-        <div class="icon" @click=${this._toggleEntity} style="color: rgb(${iconColor}); background-color: rgba(${iconColor}, var(--sq-icon-opacity));">
-          <ha-icon .icon=${this._icon}></ha-icon>
+      <div class='container' @click=${this._showMoreInfo}>
+        <div class='icon' @click=${this._toggleEntity} style='
+          color: rgb(${iconColor});
+          background-color: rgba(${iconColor}, var(--sq-icon-opacity));
+        '>
+          <ha-icon .icon=${icon}></ha-icon>
         </div>
-        <div class="name">${this._name}</div>
-        <div class="state">${stateFmtd}</div>
+        <div class='name'>${name}</div>
+        <div class='state'>${stateFmtd}</div>
       </div>
     `;
     }
