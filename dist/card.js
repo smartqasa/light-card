@@ -587,7 +587,7 @@ class SmartQasaLightCard2 extends (0, _lit.LitElement) {
             this._entity = config.entity;
             this._icon = config.icon || null;
             this._name = config.name || null;
-        } else throw new Error("You need to define an entity.");
+        } else throw new Error("You need to define an entity");
     }
     set hass(hass) {
         this._hass = hass;
