@@ -723,7 +723,7 @@ window.customCards.push({
     type: "smartqasa-light-card2",
     name: "SmartQasa Light Card2",
     preview: true,
-    description: "A SmartQasa card for controlling a light entity."
+    description: "A SmartQasa card for controlling a light entity. v2.11"
 });
 
 },{"lit":"4antt","@parcel/transformer-js/src/esmodule-helpers.js":"9FYyo"}],"4antt":[function(require,module,exports) {
