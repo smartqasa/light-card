@@ -1,2 +1,3 @@
-# SmartQasa Light Card v2
-SmartQasa Light Card
+# SmartQasa Dashboard Cards
+
+SmartQasa Dashboard Cards

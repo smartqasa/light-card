@@ -1,6 +1,6 @@
 {
     "name": "SmartQasa Light Card - v2.12",
     "render_readme": true,
-    "filename": "card.js",
+    "filename": "smartqasa.js",
     "content_in_root": false
 }

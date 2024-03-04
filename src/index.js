@@ -1,10 +1,10 @@
-import { SmartQasaLightCard2 } from "./card";
+import { SmartQasaLightTile } from "../cards/light-tile";
 
-customElements.define("smartqasa-light-card2", SmartQasaLightCard2);
+customElements.define("smartqasa-light-tile", SmartQasaLightTile);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
-    type: "smartqasa-light-card2",
-    name: "SmartQasa Light Card v2.12",
-    description: "A SmartQasa card for controlling a light entity.",
+    type: "smartqasa-light-tile",
+    name: "SmartQasa Light Tile",
+    description: "A SmartQasa tile for controlling a light entity.",
 });

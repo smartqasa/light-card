@@ -1,7 +1,7 @@
 {
-  "name": "smartqasa-light-card",
+  "name": "smartqasa-cards",
   "version": "1.0.0",
-  "description": "A SmartQasa card for controlling a light entity.",
+  "description": "SmartQasa Dashboard Cards",
   "type": "module",
   "scripts": {
     "build": "rollup -c"

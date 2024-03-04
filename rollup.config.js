@@ -4,14 +4,14 @@ import babel from '@rollup/plugin-babel';
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/card.js',
+    file: 'dist/smartqasa.js',
     format: 'iife', // Using 'iife' for browsers
-    name: 'SmartQasaLightCard', // Define a global variable name for your bundle
+    name: 'SmartQasaCards', // Define a global variable name for your bundle
   },
   plugins: [
-    resolve(), // Ensures Rollup can find `lit` in `node_modules`
+    resolve(),
     babel({
-      exclude: 'node_modules/**', // Excludes node_modules from being transpiled by Babel
+      exclude: 'node_modules/**',
       babelHelpers: 'bundled',
     }),
   ]

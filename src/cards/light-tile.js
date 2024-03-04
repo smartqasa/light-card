@@ -1,7 +1,7 @@
-import { LitElement, html, css } from 'lit';
-import styles from './styles';
+import { LitElement, html } from 'lit';
+import styles from '../styles/tile';
 
-export class SmartQasaLightCard2 extends LitElement {
+export class SmartQasaLightTile extends LitElement {
 
   _hass;
 
